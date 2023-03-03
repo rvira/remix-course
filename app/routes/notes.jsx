@@ -5,7 +5,12 @@ import  NewNote, {links as newNoteLinks} from '~/components/NewNote'
 import { getStoredNotes, storeNotes } from '~/data/notes';
 import { Link, useCatch, useLoaderData } from '@remix-run/react';
 
-
+export function meta(){
+  return {
+    title:'All Notes',
+    desscription: 'Manage your notes.'
+  }
+}
 
 export default function NotesPage(){
     const notes = useLoaderData();
@@ -61,6 +66,7 @@ export async function action({request}){
     //redirect back to which page after processing the request
     return redirect('/notes');
 }
+
 
 export function CatchBoundary() {
   const caughtResponse = useCatch();

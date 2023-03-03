@@ -6,8 +6,6 @@ import { getStoredNotes } from '../data/notes';
 export default function NoteDetailsPage(){
 
     const note = useLoaderData();
-
-
     return(
         <main id="note-details">
             <header>
