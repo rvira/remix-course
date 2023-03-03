@@ -8,7 +8,7 @@ import { Link, useCatch, useLoaderData } from '@remix-run/react';
 export function meta(){
   return {
     title:'All Notes',
-    desscription: 'Manage your notes.'
+    description: 'Manage your notes.'
   }
 }
 

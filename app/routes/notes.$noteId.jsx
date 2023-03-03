@@ -3,6 +3,15 @@ import { json, useLoaderData } from 'react-router';
 import styles from '~/styles/note-details.css'
 import { getStoredNotes } from '../data/notes';
 
+
+export function meta({data}){
+    return {
+      title: data.title,
+      description: 'Manage your notes.'
+    }
+  }
+
+
 export default function NoteDetailsPage(){
 
     const note = useLoaderData();
